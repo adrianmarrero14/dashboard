@@ -1,0 +1,24 @@
+Adrián Project Dashboard
+========================
+
+Copyright (c) 2026 Adrián Project
+
+This repository contains modifications and original work for Adrián Project,
+a personal life administration dashboard.
+
+Third-party software
+--------------------
+
+Portions of this codebase are derived from TailAdmin Next.js Free Admin
+Dashboard Template:
+
+  Repository: https://github.com/TailAdmin/free-nextjs-admin-dashboard
+  Copyright (c) 2023 TailAdmin
+  License: MIT (see LICENSE)
+
+The MIT License requires that the above copyright notice and permission notice
+be preserved in copies or substantial portions of the Software. The LICENSE file
+in this repository contains the full license text from TailAdmin.
+
+When distributing or publishing derivatives, retain both this NOTICE file and
+the LICENSE file, and do not remove the TailAdmin copyright line from LICENSE.
