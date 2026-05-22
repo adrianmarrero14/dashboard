@@ -1,5 +1,6 @@
 "use client";
 
+import NavLabel from "@/components/common/NavLabel";
 import { SITE } from "@/config/site";
 import { useModules } from "@/context/ModulesContext";
 import { useSidebar } from "@/context/SidebarContext";
@@ -18,6 +19,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import SidebarWidget from "./SidebarWidget";
 
@@ -28,6 +30,7 @@ const AppSidebar: React.FC = () => {
   const pathname = usePathname();
   const { enabledModules } = useModules();
   const showDev = shouldShowDevRoutes();
+  const tLayout = useTranslations("layout.sidebar.sections");
 
   const moduleNavItems = useMemo(
     () => buildSidebarNav(enabledModules),
@@ -52,7 +55,7 @@ const AppSidebar: React.FC = () => {
   const renderMenuItems = (items: SidebarNavItem[], section: NavSection) => (
     <ul className="flex flex-col gap-4">
       {items.map((nav, index) => (
-        <li key={`${section}-${nav.name}`}>
+        <li key={`${section}-${nav.nameKey}`}>
           {nav.subItems ? (
             <button
               onClick={() => handleSubmenuToggle(index, section)}
@@ -76,7 +79,9 @@ const AppSidebar: React.FC = () => {
                 {renderSidebarIcon(nav.icon)}
               </span>
               {(isExpanded || isHovered || isMobileOpen) && (
-                <span className={`menu-item-text`}>{nav.name}</span>
+                <span className={`menu-item-text`}>
+                  <NavLabel nameKey={nav.nameKey} />
+                </span>
               )}
               {(isExpanded || isHovered || isMobileOpen) && (
                 <ChevronDownIcon
@@ -107,7 +112,9 @@ const AppSidebar: React.FC = () => {
                   {renderSidebarIcon(nav.icon)}
                 </span>
                 {(isExpanded || isHovered || isMobileOpen) && (
-                  <span className={`menu-item-text`}>{nav.name}</span>
+                  <span className={`menu-item-text`}>
+                    <NavLabel nameKey={nav.nameKey} />
+                  </span>
                 )}
               </Link>
             )
@@ -127,7 +134,7 @@ const AppSidebar: React.FC = () => {
             >
               <ul className="mt-2 space-y-1 ml-9">
                 {nav.subItems.map((subItem) => (
-                  <li key={subItem.name}>
+                  <li key={subItem.nameKey}>
                     <Link
                       href={subItem.path}
                       className={`menu-dropdown-item ${
@@ -136,7 +143,7 @@ const AppSidebar: React.FC = () => {
                           : "menu-dropdown-item-inactive"
                       }`}
                     >
-                      {subItem.name}
+                      <NavLabel nameKey={subItem.nameKey} />
                     </Link>
                   </li>
                 ))}
@@ -262,19 +269,19 @@ const AppSidebar: React.FC = () => {
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             <div>
-              {renderSectionHeading("Menú")}
+              {renderSectionHeading(tLayout("menu"))}
               {renderMenuItems(moduleNavItems, "modules")}
             </div>
 
             {showDev && devNavItems.length > 0 && (
               <div>
-                {renderSectionHeading("Desarrollo")}
+                {renderSectionHeading(tLayout("development"))}
                 {renderMenuItems(devNavItems, "dev")}
               </div>
             )}
 
             <div>
-              {renderSectionHeading("Sistema")}
+              {renderSectionHeading(tLayout("system"))}
               <ul className="flex flex-col gap-4">
                 <li>
                   <Link
@@ -294,7 +301,7 @@ const AppSidebar: React.FC = () => {
                     </span>
                     {(isExpanded || isHovered || isMobileOpen) && (
                       <span className="menu-item-text">
-                        {SETTINGS_NAV_ITEM.name}
+                        <NavLabel nameKey={SETTINGS_NAV_ITEM.nameKey} />
                       </span>
                     )}
                   </Link>

@@ -1,17 +1,26 @@
 import BarChartOne from "@/components/charts/bar/BarChartOne";
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import { pageMetadata } from "@/lib/metadata";
+import {
+  generateAdminPageMetadata,
+  getAdminPageTitle,
+} from "@/lib/admin-page";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-export const metadata = pageMetadata("Gráfico de barras");
+export async function generateMetadata() {
+  return generateAdminPageMetadata("barChart");
+}
 
-export default function page() {
+export default async function BarChartPage() {
+  const title = await getAdminPageTitle("barChart");
+  const t = await getTranslations("pages.barChart");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="Bar Chart" />
+      <PageBreadcrumb pageTitle={title} />
       <div className="space-y-6">
-        <ComponentCard title="Bar Chart 1">
+        <ComponentCard title={t("chartTitle")}>
           <BarChartOne />
         </ComponentCard>
       </div>

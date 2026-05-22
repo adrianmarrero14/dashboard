@@ -1,8 +1,12 @@
-import { useEffect } from 'react';
-import flatpickr from 'flatpickr';
-import 'flatpickr/dist/flatpickr.css';
-import Label from './Label';
-import { CalenderIcon } from '../../icons';
+"use client";
+
+import { useEffect } from "react";
+import flatpickr from "flatpickr";
+import { Spanish } from "flatpickr/dist/l10n/es.js";
+import "flatpickr/dist/flatpickr.css";
+import Label from "./Label";
+import { CalenderIcon } from "../../icons";
+import { useLocale } from "next-intl";
 import Hook = flatpickr.Options.Hook;
 import DateOption = flatpickr.Options.DateOption;
 
@@ -23,6 +27,8 @@ export default function DatePicker({
   defaultDate,
   placeholder,
 }: PropsType) {
+  const locale = useLocale();
+
   useEffect(() => {
     const flatPickr = flatpickr(`#${id}`, {
       mode: mode || "single",
@@ -31,6 +37,7 @@ export default function DatePicker({
       dateFormat: "Y-m-d",
       defaultDate,
       onChange,
+      locale: locale === "es" ? Spanish : undefined,
     });
 
     return () => {
@@ -38,7 +45,7 @@ export default function DatePicker({
         flatPickr.destroy();
       }
     };
-  }, [mode, onChange, id, defaultDate]);
+  }, [mode, onChange, id, defaultDate, locale]);
 
   return (
     <div>

@@ -1,28 +1,22 @@
-import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import ResponsiveImage from "@/components/ui/images/ResponsiveImage";
-import ThreeColumnImageGrid from "@/components/ui/images/ThreeColumnImageGrid";
-import TwoColumnImageGrid from "@/components/ui/images/TwoColumnImageGrid";
-import { pageMetadata } from "@/lib/metadata";
+import ImagesPageContent from "@/components/pages/ImagesPageContent";
+import {
+  generateAdminPageMetadata,
+  getAdminPageTitle,
+} from "@/lib/admin-page";
 import React from "react";
 
-export const metadata = pageMetadata("Imágenes");
+export async function generateMetadata() {
+  return generateAdminPageMetadata("images");
+}
 
-export default function Images() {
+export default async function Images() {
+  const title = await getAdminPageTitle("images");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="Images" />
-      <div className="space-y-5 sm:space-y-6">
-        <ComponentCard title="Responsive image">
-          <ResponsiveImage />
-        </ComponentCard>
-        <ComponentCard title="Image in 2 Grid">
-          <TwoColumnImageGrid />
-        </ComponentCard>
-        <ComponentCard title="Image in 3 Grid">
-          <ThreeColumnImageGrid />
-        </ComponentCard>
-      </div>
+      <PageBreadcrumb pageTitle={title} />
+      <ImagesPageContent />
     </div>
   );
 }

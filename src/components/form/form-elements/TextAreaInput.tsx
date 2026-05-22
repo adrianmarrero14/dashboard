@@ -1,18 +1,21 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import ComponentCard from "../../common/ComponentCard";
 import TextArea from "../input/TextArea";
 import Label from "../Label";
 
 export default function TextAreaInput() {
+  const tExamples = useTranslations("form.examples.textarea");
+  const tFields = useTranslations("form.fields");
   const [message, setMessage] = useState("");
   const [messageTwo, setMessageTwo] = useState("");
+
   return (
-    <ComponentCard title="Textarea input field">
+    <ComponentCard title={tExamples("title")} desc={tExamples("desc")}>
       <div className="space-y-6">
-        {/* Default TextArea */}
         <div>
-          <Label>Description</Label>
+          <Label>{tFields("description")}</Label>
           <TextArea
             value={message}
             onChange={(value) => setMessage(value)}
@@ -20,21 +23,19 @@ export default function TextAreaInput() {
           />
         </div>
 
-        {/* Disabled TextArea */}
         <div>
-          <Label>Description</Label>
+          <Label>{tFields("description")}</Label>
           <TextArea rows={6} disabled />
         </div>
 
-        {/* Error TextArea */}
         <div>
-          <Label>Description</Label>
+          <Label>{tFields("description")}</Label>
           <TextArea
             rows={6}
             value={messageTwo}
             error
             onChange={(value) => setMessageTwo(value)}
-            hint="Please enter a valid message."
+            hint={tExamples("hintInvalid")}
           />
         </div>
       </div>

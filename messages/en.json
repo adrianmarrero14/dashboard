@@ -1,0 +1,644 @@
+{
+  "site": {
+    "name": "Adrián Project",
+    "description": "Personal life administration — manage your life like a company.",
+    "tagline": "Your personal life, managed all in one place.",
+    "copyright": "Adrián Project"
+  },
+  "common": {
+    "actions": {
+      "close": "Close",
+      "saveChanges": "Save Changes",
+      "filter": "Filter",
+      "viewMore": "View More",
+      "delete": "Delete",
+      "openModal": "Open Modal",
+      "edit": "Edit",
+      "or": "Or"
+    },
+    "breadcrumb": {
+      "home": "Home"
+    },
+    "chartPeriod": {
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "annually": "Annually"
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Aug",
+      "sep": "Sep",
+      "oct": "Oct",
+      "nov": "Nov",
+      "dec": "Dec"
+    }
+  },
+  "layout": {
+    "sidebar": {
+      "sections": {
+        "menu": "Menu",
+        "development": "Development",
+        "system": "System"
+      },
+      "widget": {
+        "settings": "Settings"
+      }
+    },
+    "header": {
+      "toggleSidebar": "Toggle Sidebar",
+      "searchPlaceholder": "Search or type command..."
+    }
+  },
+  "nav": {
+    "settings": "Settings",
+    "dev": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "tables": "Tables",
+      "basicTables": "Basic Tables",
+      "pages": "Pages",
+      "blankPage": "Blank Page",
+      "error404": "404 Error",
+      "charts": "Charts",
+      "lineChart": "Line Chart",
+      "barChart": "Bar Chart",
+      "uiElements": "UI Elements",
+      "alerts": "Alerts",
+      "avatar": "Avatar",
+      "badge": "Badge",
+      "buttons": "Buttons",
+      "images": "Images",
+      "videos": "Videos",
+      "authentication": "Authentication",
+      "signIn": "Sign In",
+      "signUp": "Sign Up"
+    }
+  },
+  "modules": {
+    "overview": {
+      "label": "Home",
+      "description": "Summary dashboard and overview of your personal life.",
+      "nav": {
+        "main": "Overview"
+      }
+    },
+    "employment": {
+      "label": "Employment",
+      "description": "Work, contracts, and professional tracking.",
+      "nav": {
+        "main": "Employment"
+      }
+    },
+    "finances": {
+      "label": "Finances",
+      "description": "Income, expenses, and financial planning.",
+      "nav": {
+        "main": "Finances"
+      }
+    },
+    "projects": {
+      "label": "Projects",
+      "description": "Personal projects and long-term goals.",
+      "nav": {
+        "main": "Projects"
+      }
+    },
+    "calendar": {
+      "label": "Calendar",
+      "description": "Events and scheduling.",
+      "nav": {
+        "main": "Calendar"
+      }
+    },
+    "profile": {
+      "label": "Profile",
+      "description": "Personal data and account preferences.",
+      "nav": {
+        "main": "Profile"
+      }
+    },
+    "settings": {
+      "alwaysActive": "Always active",
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "languageHeading": "Language",
+    "languageDescription": "Choose the display language for the dashboard.",
+    "modulesHeading": "Modules",
+    "modulesDescription": "Enable or disable dashboard sections. Changes are saved on this device."
+  },
+  "pages": {
+    "overview": {
+      "title": "Home",
+      "sampleDataNote": "The metrics below are sample data until each module has its own dashboard."
+    },
+    "employment": {
+      "title": "Employment",
+      "description": "Track jobs, contracts, and your professional path."
+    },
+    "finances": {
+      "title": "Finances",
+      "description": "Income, expenses, and financial planning."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Personal projects and long-term goals."
+    },
+    "calendar": {
+      "title": "Calendar"
+    },
+    "profile": {
+      "title": "Profile"
+    },
+    "settings": {
+      "title": "Settings"
+    },
+    "formElements": {
+      "title": "Form Elements"
+    },
+    "lineChart": {
+      "title": "Line Chart",
+      "chartTitle": "Line Chart 1"
+    },
+    "barChart": {
+      "title": "Bar Chart",
+      "chartTitle": "Bar Chart 1"
+    },
+    "basicTables": {
+      "title": "Basic Tables",
+      "tableTitle": "Basic Table 1"
+    },
+    "blank": {
+      "title": "Blank Page",
+      "cardTitle": "Card Title Here",
+      "cardBody": "Start putting content on grids or panels, you can also use different combinations of grids. Please check out the dashboard and other pages."
+    },
+    "buttons": {
+      "title": "Buttons"
+    },
+    "images": {
+      "title": "Images"
+    },
+    "modals": {
+      "title": "Modals"
+    },
+    "alerts": {
+      "title": "Alerts"
+    },
+    "avatars": {
+      "title": "Avatars"
+    },
+    "badge": {
+      "title": "Badges"
+    },
+    "videos": {
+      "title": "Videos"
+    },
+    "signIn": {
+      "title": "Sign In"
+    },
+    "signUp": {
+      "title": "Sign Up"
+    },
+    "error404": {
+      "title": "Error 404"
+    }
+  },
+  "errors": {
+    "notFoundTitle": "ERROR",
+    "notFoundMessage": "We can't seem to find the page you are looking for!",
+    "backHome": "Back to Home Page",
+    "imageAlt": "404"
+  },
+  "auth": {
+    "common": {
+      "backToDashboard": "Back to dashboard",
+      "or": "Or"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    },
+    "placeholders": {
+      "emailExample": "info@gmail.com",
+      "password": "Enter your password",
+      "firstName": "Enter your first name",
+      "lastName": "Enter your last name"
+    },
+    "signIn": {
+      "title": "Sign In",
+      "subtitle": "Enter your email and password to sign in!",
+      "google": "Sign in with Google",
+      "x": "Sign in with X",
+      "rememberMe": "Keep me logged in",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "link": "Sign Up"
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "subtitle": "Enter your email and password to sign up!",
+      "google": "Sign up with Google",
+      "x": "Sign up with X",
+      "termsIntro": "By creating an account means you agree to the",
+      "terms": "Terms and Conditions",
+      "privacy": "Privacy Policy",
+      "submit": "Sign Up",
+      "hasAccount": "Already have an account?",
+      "link": "Sign In",
+      "andOur": "and our"
+    }
+  },
+  "ecommerce": {
+    "metrics": {
+      "customers": "Customers",
+      "orders": "Orders"
+    },
+    "recentOrders": {
+      "title": "Recent Orders",
+      "seeAll": "See all",
+      "columns": {
+        "products": "Products",
+        "category": "Category",
+        "price": "Price",
+        "status": "Status"
+      },
+      "variants": "{count} Variants"
+    },
+    "orderStatus": {
+      "delivered": "Delivered",
+      "pending": "Pending",
+      "canceled": "Canceled"
+    },
+    "demographic": {
+      "title": "Customers Demographic",
+      "subtitle": "Number of customer based on country",
+      "customerCount": "{count} Customers",
+      "countries": {
+        "usa": "USA",
+        "france": "France"
+      }
+    },
+    "monthlySales": {
+      "title": "Monthly Sales"
+    },
+    "monthlyTarget": {
+      "title": "Monthly Target",
+      "subtitle": "Target you've set for each month",
+      "progress": "Progress",
+      "message": "You earn $3287 today, it is higher than last month. Keep up your good work!",
+      "stats": {
+        "target": "Target",
+        "revenue": "Revenue",
+        "today": "Today"
+      }
+    },
+    "statistics": {
+      "title": "Statistics",
+      "subtitle": "Target you've set for each month",
+      "dateRangePlaceholder": "Select date range"
+    },
+    "charts": {
+      "sales": "Sales",
+      "revenue": "Revenue"
+    }
+  },
+  "form": {
+    "select": {
+      "placeholder": "Select an option"
+    },
+    "phone": {
+      "placeholder": "+1 (555) 000-0000"
+    },
+    "multiSelect": {
+      "placeholder": "Select option"
+    },
+    "fields": {
+      "email": "Email",
+      "input": "Input",
+      "inputWithPlaceholder": "Input with Placeholder",
+      "selectInput": "Select Input",
+      "password": "Password",
+      "datePicker": "Date Picker",
+      "timePicker": "Time Picker",
+      "payment": "Payment",
+      "textarea": "Textarea",
+      "checkbox": "Checkbox",
+      "radio": "Radio Buttons",
+      "toggle": "Toggle Switch",
+      "fileInput": "File Input",
+      "dropzone": "Dropzone",
+      "phone": "Phone",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "bio": "Bio",
+      "description": "Description",
+      "datePickerInput": "Date Picker Input",
+      "passwordInput": "Password Input"
+    },
+    "placeholders": {
+      "emailExample": "info@gmail.com",
+      "selectOption": "Select an option",
+      "password": "Enter your password",
+      "selectDate": "Select date",
+      "selectADate": "Select a date",
+      "cardNumber": "Card number",
+      "disabledEmail": "Disabled email",
+      "bio": "Enter your bio"
+    },
+    "validation": {
+      "emailInvalid": "This is an invalid email address.",
+      "emailValid": "Valid email!",
+      "fieldDisabled": "This field is disabled."
+    },
+    "states": {
+      "default": "Default",
+      "checked": "Checked",
+      "disabled": "Disabled",
+      "selected": "Selected"
+    },
+    "examples": {
+      "defaultInputs": {
+        "title": "Default Inputs",
+        "desc": "Basic form inputs with default styles."
+      },
+      "inputStates": {
+        "title": "Input States",
+        "desc": "Validation styles for error, success, and disabled states."
+      },
+      "selectInputs": {
+        "title": "Select Inputs",
+        "desc": "Native and custom select components.",
+        "multiSelectLabel": "Multiple Select Options"
+      },
+      "inputGroup": {
+        "title": "Input Group",
+        "desc": "Inputs with prefix and suffix addons."
+      },
+      "textarea": {
+        "title": "Textarea Input",
+        "desc": "Multi-line text input.",
+        "hintInvalid": "Please enter a valid message."
+      },
+      "fileInput": {
+        "title": "File Input",
+        "desc": "Upload files from your device.",
+        "uploadLabel": "Upload file"
+      },
+      "dropzone": {
+        "title": "Dropzone",
+        "dragActive": "Drop files here...",
+        "dragInactive": "Drag & drop files here, or click to select",
+        "hint": "SVG, PNG, JPG or GIF (max. 800x400px)",
+        "browseFile": "Browse File"
+      },
+      "checkbox": {
+        "title": "Checkbox",
+        "desc": "Single and grouped checkboxes."
+      },
+      "radio": {
+        "title": "Radio Buttons",
+        "desc": "Mutually exclusive options."
+      },
+      "toggle": {
+        "title": "Toggle Switch",
+        "desc": "On/off toggle controls."
+      },
+      "options": {
+        "marketing": "Marketing",
+        "template": "Template",
+        "development": "Development",
+        "option1": "Option 1",
+        "option2": "Option 2",
+        "option3": "Option 3",
+        "option4": "Option 4",
+        "option5": "Option 5"
+      }
+    }
+  },
+  "profile": {
+    "actions": {
+      "edit": "Edit"
+    },
+    "modals": {
+      "address": {
+        "title": "Edit Address"
+      },
+      "personal": {
+        "title": "Edit Personal Information"
+      },
+      "subtitle": "Update your details to keep your profile up-to-date."
+    },
+    "sections": {
+      "social": "Social Links",
+      "personal": "Personal Information"
+    },
+    "fields": {
+      "facebook": "Facebook",
+      "x": "X.com",
+      "linkedin": "Linkedin",
+      "instagram": "Instagram",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone",
+      "bio": "Bio"
+    },
+    "address": {
+      "title": "Address",
+      "country": "Country",
+      "cityState": "City/State",
+      "postalCode": "Postal Code",
+      "taxId": "TAX ID"
+    }
+  },
+  "calendar": {
+    "toolbar": {
+      "addEvent": "Add Event +"
+    },
+    "modal": {
+      "titleEdit": "Edit Event",
+      "titleAdd": "Add Event",
+      "subtitle": "Plan your next big moment: schedule or edit an event to stay on track",
+      "update": "Update Changes",
+      "submit": "Add Event"
+    },
+    "fields": {
+      "title": "Event Title",
+      "color": "Event Color",
+      "startDate": "Enter Start Date",
+      "endDate": "Enter End Date"
+    },
+    "colors": {
+      "danger": "Danger",
+      "success": "Success",
+      "primary": "Primary",
+      "warning": "Warning"
+    },
+    "demo": {
+      "events": {
+        "eventConf": "Event Conf.",
+        "meeting": "Meeting",
+        "workshop": "Workshop",
+        "lunch": "Lunch",
+        "allDay": "All Day Event",
+        "repeating": "Repeating Event"
+      }
+    }
+  },
+  "tables": {
+    "columns": {
+      "user": "User",
+      "projectName": "Project Name",
+      "team": "Team",
+      "status": "Status",
+      "budget": "Budget"
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending",
+      "cancel": "Cancel"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "header": {
+    "notifications": {
+      "title": "Notification",
+      "permissionRequest": "requests permission to change",
+      "project": "Project",
+      "timeAgoMinutes": "{count} min ago",
+      "timeAgoHour": "1 hr ago",
+      "viewAll": "View All Notifications"
+    },
+    "user": {
+      "alt": "User",
+      "editProfile": "Edit profile",
+      "accountSettings": "Account settings",
+      "support": "Support",
+      "signOut": "Sign out"
+    }
+  },
+  "demo": {
+    "alertsPage": {
+      "successCard": "Success Alert",
+      "warningCard": "Warning Alert",
+      "errorCard": "Error Alert",
+      "infoCard": "Info Alert",
+      "successTitle": "Success Message",
+      "warningTitle": "Warning Message",
+      "errorTitle": "Error Message",
+      "infoTitle": "Info Message",
+      "cautionMessage": "Be cautious when performing this action."
+    },
+    "images": {
+      "responsive": "Responsive image",
+      "grid2": "Image in 2 Grid",
+      "grid3": "Image in 3 Grid"
+    },
+    "avatars": {
+      "default": "Default Avatar",
+      "online": "Avatar with online indicator",
+      "offline": "Avatar with Offline indicator",
+      "busy": "Avatar with busy indicator"
+    },
+    "badgePage": {
+      "lightBg": "With Light Background",
+      "solidBg": "With Solid Background",
+      "lightLeftIcon": "Light Background with Left Icon",
+      "solidLeftIcon": "Solid Background with Left Icon",
+      "lightRightIcon": "Light Background with Right Icon",
+      "solidRightIcon": "Solid Background with Right Icon",
+      "colors": {
+        "primary": "Primary",
+        "success": "Success",
+        "error": "Error",
+        "warning": "Warning",
+        "info": "Info",
+        "light": "Light",
+        "dark": "Dark"
+      }
+    },
+    "buttons": {
+      "buttonText": "Button Text",
+      "primary": "Primary Button",
+      "primaryLeftIcon": "Primary Button with Left Icon",
+      "primaryRightIcon": "Primary Button with Right Icon",
+      "secondary": "Secondary Button",
+      "outlineLeftIcon": "Outline Button with Left Icon",
+      "outlineRightIcon": "Outline Button with Right Icon"
+    }
+  },
+  "example": {
+    "modals": {
+      "default": {
+        "title": "Default Modal",
+        "heading": "Modal Heading",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod est ac leo cursus, a ullamcorper magna tincidunt."
+      },
+      "centered": {
+        "title": "Vertically Centered Modal",
+        "heading": "All Done! Success Confirmed",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod est ac leo cursus."
+      },
+      "fullscreen": {
+        "title": "Full Screen Modal",
+        "heading": "Modal Heading",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "form": {
+        "title": "Form In Modal",
+        "section": "Personal Information"
+      }
+    },
+    "modalBasedTitle": "Modal Based Alerts",
+    "alerts": {
+      "success": {
+        "title": "Success Alert",
+        "message": "Well Done!",
+        "button": "Okay Got It"
+      },
+      "info": {
+        "title": "Information Alert",
+        "message": "Information Alert!",
+        "button": "Okay Got It"
+      },
+      "warning": {
+        "title": "Warning Alert",
+        "message": "Warning Alert!",
+        "button": "Okay Got It"
+      },
+      "danger": {
+        "title": "Danger Alert",
+        "message": "Danger Alert!",
+        "button": "Okay Got It"
+      }
+    }
+  },
+  "ui": {
+    "alert": {
+      "learnMore": "Learn more"
+    },
+    "video": {
+      "youtubeTitle": "YouTube video",
+      "ratio169": "Video Ratio 16:9",
+      "ratio43": "Video Ratio 4:3",
+      "ratio219": "Video Ratio 21:9",
+      "ratio11": "Video Ratio 1:1"
+    }
+  }
+}

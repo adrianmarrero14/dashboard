@@ -1,0 +1,644 @@
+{
+  "site": {
+    "name": "Adrián Project",
+    "description": "Administración de vida personal — gestiona tu vida como una empresa.",
+    "tagline": "Tu vida personal, gestionada en un solo lugar.",
+    "copyright": "Adrián Project"
+  },
+  "common": {
+    "actions": {
+      "close": "Cerrar",
+      "saveChanges": "Guardar cambios",
+      "filter": "Filtrar",
+      "viewMore": "Ver más",
+      "delete": "Eliminar",
+      "openModal": "Abrir modal",
+      "edit": "Editar",
+      "or": "O"
+    },
+    "breadcrumb": {
+      "home": "Inicio"
+    },
+    "chartPeriod": {
+      "monthly": "Mensual",
+      "quarterly": "Trimestral",
+      "annually": "Anual"
+    },
+    "months": {
+      "jan": "Ene",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Abr",
+      "may": "May",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Ago",
+      "sep": "Sep",
+      "oct": "Oct",
+      "nov": "Nov",
+      "dec": "Dic"
+    }
+  },
+  "layout": {
+    "sidebar": {
+      "sections": {
+        "menu": "Menú",
+        "development": "Desarrollo",
+        "system": "Sistema"
+      },
+      "widget": {
+        "settings": "Configuración"
+      }
+    },
+    "header": {
+      "toggleSidebar": "Alternar barra lateral",
+      "searchPlaceholder": "Buscar o escribir un comando..."
+    }
+  },
+  "nav": {
+    "settings": "Configuración",
+    "dev": {
+      "forms": "Formularios",
+      "formElements": "Elementos de formulario",
+      "tables": "Tablas",
+      "basicTables": "Tablas básicas",
+      "pages": "Páginas",
+      "blankPage": "Página en blanco",
+      "error404": "404 Error",
+      "charts": "Gráficos",
+      "lineChart": "Gráfico de líneas",
+      "barChart": "Gráfico de barras",
+      "uiElements": "Elementos UI",
+      "alerts": "Alertas",
+      "avatar": "Avatar",
+      "badge": "Insignias",
+      "buttons": "Botones",
+      "images": "Imágenes",
+      "videos": "Vídeos",
+      "authentication": "Autenticación",
+      "signIn": "Iniciar sesión",
+      "signUp": "Registro"
+    }
+  },
+  "modules": {
+    "overview": {
+      "label": "Inicio",
+      "description": "Panel de resumen y vista general de tu vida personal.",
+      "nav": {
+        "main": "Resumen"
+      }
+    },
+    "employment": {
+      "label": "Empleo",
+      "description": "Trabajo, contratos y seguimiento profesional.",
+      "nav": {
+        "main": "Empleo"
+      }
+    },
+    "finances": {
+      "label": "Finanzas",
+      "description": "Ingresos, gastos y planificación financiera.",
+      "nav": {
+        "main": "Finanzas"
+      }
+    },
+    "projects": {
+      "label": "Proyectos",
+      "description": "Proyectos personales y objetivos a largo plazo.",
+      "nav": {
+        "main": "Proyectos"
+      }
+    },
+    "calendar": {
+      "label": "Calendario",
+      "description": "Eventos y planificación temporal.",
+      "nav": {
+        "main": "Calendario"
+      }
+    },
+    "profile": {
+      "label": "Perfil",
+      "description": "Datos personales y preferencias de cuenta.",
+      "nav": {
+        "main": "Perfil"
+      }
+    },
+    "settings": {
+      "alwaysActive": "Siempre activo",
+      "enabled": "Activado",
+      "disabled": "Desactivado"
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "languageHeading": "Idioma",
+    "languageDescription": "Elige el idioma de visualización del panel.",
+    "modulesHeading": "Módulos",
+    "modulesDescription": "Activa o desactiva las secciones del panel. Los cambios se guardan en este dispositivo."
+  },
+  "pages": {
+    "overview": {
+      "title": "Inicio",
+      "sampleDataNote": "Los indicadores siguientes son datos de ejemplo hasta que cada módulo tenga su propio panel."
+    },
+    "employment": {
+      "title": "Empleo",
+      "description": "Seguimiento de empleos, contratos y trayectoria profesional."
+    },
+    "finances": {
+      "title": "Finanzas",
+      "description": "Ingresos, gastos y planificación financiera."
+    },
+    "projects": {
+      "title": "Proyectos",
+      "description": "Proyectos personales y objetivos a largo plazo."
+    },
+    "calendar": {
+      "title": "Calendario"
+    },
+    "profile": {
+      "title": "Perfil"
+    },
+    "settings": {
+      "title": "Configuración"
+    },
+    "formElements": {
+      "title": "Elementos de formulario"
+    },
+    "lineChart": {
+      "title": "Gráfico de líneas",
+      "chartTitle": "Gráfico de líneas 1"
+    },
+    "barChart": {
+      "title": "Gráfico de barras",
+      "chartTitle": "Gráfico de barras 1"
+    },
+    "basicTables": {
+      "title": "Tablas básicas",
+      "tableTitle": "Tabla básica 1"
+    },
+    "blank": {
+      "title": "Página en blanco",
+      "cardTitle": "Título de la tarjeta",
+      "cardBody": "Empieza a añadir contenido en grids o paneles; también puedes usar distintas combinaciones. Revisa el panel y otras páginas."
+    },
+    "buttons": {
+      "title": "Botones"
+    },
+    "images": {
+      "title": "Imágenes"
+    },
+    "modals": {
+      "title": "Modales"
+    },
+    "alerts": {
+      "title": "Alertas"
+    },
+    "avatars": {
+      "title": "Avatares"
+    },
+    "badge": {
+      "title": "Insignias"
+    },
+    "videos": {
+      "title": "Vídeos"
+    },
+    "signIn": {
+      "title": "Iniciar sesión"
+    },
+    "signUp": {
+      "title": "Registro"
+    },
+    "error404": {
+      "title": "Error 404"
+    }
+  },
+  "errors": {
+    "notFoundTitle": "ERROR",
+    "notFoundMessage": "¡No encontramos la página que buscas!",
+    "backHome": "Volver al inicio",
+    "imageAlt": "404"
+  },
+  "auth": {
+    "common": {
+      "backToDashboard": "Volver al panel",
+      "or": "O"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    },
+    "placeholders": {
+      "emailExample": "info@gmail.com",
+      "password": "Enter your password",
+      "firstName": "Enter your first name",
+      "lastName": "Enter your last name"
+    },
+    "signIn": {
+      "title": "Iniciar sesión",
+      "subtitle": "Introduce tu email y contraseña para iniciar sesión.",
+      "google": "Iniciar sesión con Google",
+      "x": "Iniciar sesión con X",
+      "rememberMe": "Mantener sesión iniciada",
+      "forgotPassword": "¿Olvidaste la contraseña?",
+      "submit": "Iniciar sesión",
+      "noAccount": "¿No tienes cuenta?",
+      "link": "Registrarse"
+    },
+    "signUp": {
+      "title": "Registro",
+      "subtitle": "Introduce tu email y contraseña para registrarte.",
+      "google": "Registrarse con Google",
+      "x": "Registrarse con X",
+      "termsIntro": "Al crear una cuenta aceptas los",
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad",
+      "submit": "Registrarse",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "link": "Iniciar sesión",
+      "andOur": "y nuestra"
+    }
+  },
+  "ecommerce": {
+    "metrics": {
+      "customers": "Clientes",
+      "orders": "Pedidos"
+    },
+    "recentOrders": {
+      "title": "Pedidos recientes",
+      "seeAll": "Ver todo",
+      "columns": {
+        "products": "Productos",
+        "category": "Categoría",
+        "price": "Precio",
+        "status": "Estado"
+      },
+      "variants": "{count} variantes"
+    },
+    "orderStatus": {
+      "delivered": "Entregado",
+      "pending": "Pendiente",
+      "canceled": "Cancelado"
+    },
+    "demographic": {
+      "title": "Demografía de clientes",
+      "subtitle": "Número de clientes por país",
+      "customerCount": "{count} clientes",
+      "countries": {
+        "usa": "USA",
+        "france": "France"
+      }
+    },
+    "monthlySales": {
+      "title": "Ventas mensuales"
+    },
+    "monthlyTarget": {
+      "title": "Objetivo mensual",
+      "subtitle": "Objetivo que has fijado para cada mes",
+      "progress": "Progreso",
+      "message": "Has ganado $3287 hoy, es más que el mes pasado. ¡Sigue así!",
+      "stats": {
+        "target": "Objetivo",
+        "revenue": "Ingresos",
+        "today": "Hoy"
+      }
+    },
+    "statistics": {
+      "title": "Estadísticas",
+      "subtitle": "Objetivo que has fijado para cada mes",
+      "dateRangePlaceholder": "Seleccionar rango de fechas"
+    },
+    "charts": {
+      "sales": "Ventas",
+      "revenue": "Ingresos"
+    }
+  },
+  "form": {
+    "select": {
+      "placeholder": "Select an option"
+    },
+    "phone": {
+      "placeholder": "+1 (555) 000-0000"
+    },
+    "multiSelect": {
+      "placeholder": "Select option"
+    },
+    "fields": {
+      "email": "Email",
+      "input": "Input",
+      "inputWithPlaceholder": "Input with Placeholder",
+      "selectInput": "Select Input",
+      "password": "Password",
+      "datePicker": "Date Picker",
+      "timePicker": "Time Picker",
+      "payment": "Payment",
+      "textarea": "Textarea",
+      "checkbox": "Checkbox",
+      "radio": "Radio Buttons",
+      "toggle": "Toggle Switch",
+      "fileInput": "File Input",
+      "dropzone": "Dropzone",
+      "phone": "Phone",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "bio": "Bio",
+      "description": "Description",
+      "datePickerInput": "Date Picker Input",
+      "passwordInput": "Password Input"
+    },
+    "placeholders": {
+      "emailExample": "info@gmail.com",
+      "selectOption": "Select an option",
+      "password": "Enter your password",
+      "selectDate": "Select date",
+      "selectADate": "Select a date",
+      "cardNumber": "Card number",
+      "disabledEmail": "Disabled email",
+      "bio": "Enter your bio"
+    },
+    "validation": {
+      "emailInvalid": "This is an invalid email address.",
+      "emailValid": "Valid email!",
+      "fieldDisabled": "This field is disabled."
+    },
+    "states": {
+      "default": "Default",
+      "checked": "Checked",
+      "disabled": "Disabled",
+      "selected": "Selected"
+    },
+    "examples": {
+      "defaultInputs": {
+        "title": "Default Inputs",
+        "desc": "Basic form inputs with default styles."
+      },
+      "inputStates": {
+        "title": "Input States",
+        "desc": "Validation styles for error, success, and disabled states."
+      },
+      "selectInputs": {
+        "title": "Select Inputs",
+        "desc": "Native and custom select components.",
+        "multiSelectLabel": "Multiple Select Options"
+      },
+      "inputGroup": {
+        "title": "Input Group",
+        "desc": "Inputs with prefix and suffix addons."
+      },
+      "textarea": {
+        "title": "Textarea Input",
+        "desc": "Multi-line text input.",
+        "hintInvalid": "Please enter a valid message."
+      },
+      "fileInput": {
+        "title": "File Input",
+        "desc": "Upload files from your device.",
+        "uploadLabel": "Upload file"
+      },
+      "dropzone": {
+        "title": "Dropzone",
+        "dragActive": "Drop files here...",
+        "dragInactive": "Drag & drop files here, or click to select",
+        "hint": "SVG, PNG, JPG or GIF (max. 800x400px)",
+        "browseFile": "Browse File"
+      },
+      "checkbox": {
+        "title": "Checkbox",
+        "desc": "Single and grouped checkboxes."
+      },
+      "radio": {
+        "title": "Radio Buttons",
+        "desc": "Mutually exclusive options."
+      },
+      "toggle": {
+        "title": "Toggle Switch",
+        "desc": "On/off toggle controls."
+      },
+      "options": {
+        "marketing": "Marketing",
+        "template": "Template",
+        "development": "Development",
+        "option1": "Option 1",
+        "option2": "Option 2",
+        "option3": "Option 3",
+        "option4": "Option 4",
+        "option5": "Option 5"
+      }
+    }
+  },
+  "profile": {
+    "actions": {
+      "edit": "Edit"
+    },
+    "modals": {
+      "address": {
+        "title": "Edit Address"
+      },
+      "personal": {
+        "title": "Edit Personal Information"
+      },
+      "subtitle": "Update your details to keep your profile up-to-date."
+    },
+    "sections": {
+      "social": "Social Links",
+      "personal": "Personal Information"
+    },
+    "fields": {
+      "facebook": "Facebook",
+      "x": "X.com",
+      "linkedin": "Linkedin",
+      "instagram": "Instagram",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone",
+      "bio": "Bio"
+    },
+    "address": {
+      "title": "Address",
+      "country": "Country",
+      "cityState": "City/State",
+      "postalCode": "Postal Code",
+      "taxId": "TAX ID"
+    }
+  },
+  "calendar": {
+    "toolbar": {
+      "addEvent": "Add Event +"
+    },
+    "modal": {
+      "titleEdit": "Edit Event",
+      "titleAdd": "Add Event",
+      "subtitle": "Plan your next big moment: schedule or edit an event to stay on track",
+      "update": "Update Changes",
+      "submit": "Add Event"
+    },
+    "fields": {
+      "title": "Event Title",
+      "color": "Event Color",
+      "startDate": "Enter Start Date",
+      "endDate": "Enter End Date"
+    },
+    "colors": {
+      "danger": "Danger",
+      "success": "Success",
+      "primary": "Primary",
+      "warning": "Warning"
+    },
+    "demo": {
+      "events": {
+        "eventConf": "Event Conf.",
+        "meeting": "Meeting",
+        "workshop": "Workshop",
+        "lunch": "Lunch",
+        "allDay": "All Day Event",
+        "repeating": "Repeating Event"
+      }
+    }
+  },
+  "tables": {
+    "columns": {
+      "user": "User",
+      "projectName": "Project Name",
+      "team": "Team",
+      "status": "Status",
+      "budget": "Budget"
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending",
+      "cancel": "Cancel"
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente"
+    }
+  },
+  "header": {
+    "notifications": {
+      "title": "Notificación",
+      "permissionRequest": "requests permission to change",
+      "project": "Project",
+      "timeAgoMinutes": "{count} min ago",
+      "timeAgoHour": "1 hr ago",
+      "viewAll": "Ver todas las notificaciones"
+    },
+    "user": {
+      "alt": "User",
+      "editProfile": "Editar perfil",
+      "accountSettings": "Configuración de cuenta",
+      "support": "Soporte",
+      "signOut": "Cerrar sesión"
+    }
+  },
+  "demo": {
+    "alertsPage": {
+      "successCard": "Alerta de éxito",
+      "warningCard": "Alerta de advertencia",
+      "errorCard": "Alerta de error",
+      "infoCard": "Alerta informativa",
+      "successTitle": "Mensaje de éxito",
+      "warningTitle": "Mensaje de advertencia",
+      "errorTitle": "Mensaje de error",
+      "infoTitle": "Mensaje informativo",
+      "cautionMessage": "Ten cuidado al realizar esta acción."
+    },
+    "images": {
+      "responsive": "Imagen responsive",
+      "grid2": "Imagen en grid de 2",
+      "grid3": "Imagen en grid de 3"
+    },
+    "avatars": {
+      "default": "Avatar por defecto",
+      "online": "Avatar con indicador en línea",
+      "offline": "Avatar con indicador desconectado",
+      "busy": "Avatar con indicador ocupado"
+    },
+    "badgePage": {
+      "lightBg": "Con fondo claro",
+      "solidBg": "Con fondo sólido",
+      "lightLeftIcon": "Fondo claro con icono izquierdo",
+      "solidLeftIcon": "Fondo sólido con icono izquierdo",
+      "lightRightIcon": "Fondo claro con icono derecho",
+      "solidRightIcon": "Fondo sólido con icono derecho",
+      "colors": {
+        "primary": "Primario",
+        "success": "Éxito",
+        "error": "Error",
+        "warning": "Advertencia",
+        "info": "Info",
+        "light": "Claro",
+        "dark": "Oscuro"
+      }
+    },
+    "buttons": {
+      "buttonText": "Texto del botón",
+      "primary": "Botón primario",
+      "primaryLeftIcon": "Botón primario con icono izquierdo",
+      "primaryRightIcon": "Botón primario con icono derecho",
+      "secondary": "Botón secundario",
+      "outlineLeftIcon": "Botón outline con icono izquierdo",
+      "outlineRightIcon": "Botón outline con icono derecho"
+    }
+  },
+  "example": {
+    "modals": {
+      "default": {
+        "title": "Default Modal",
+        "heading": "Modal Heading",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod est ac leo cursus, a ullamcorper magna tincidunt."
+      },
+      "centered": {
+        "title": "Vertically Centered Modal",
+        "heading": "All Done! Success Confirmed",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod est ac leo cursus."
+      },
+      "fullscreen": {
+        "title": "Full Screen Modal",
+        "heading": "Modal Heading",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "form": {
+        "title": "Form In Modal",
+        "section": "Personal Information"
+      }
+    },
+    "modalBasedTitle": "Modal Based Alerts",
+    "alerts": {
+      "success": {
+        "title": "Success Alert",
+        "message": "Well Done!",
+        "button": "Okay Got It"
+      },
+      "info": {
+        "title": "Information Alert",
+        "message": "Information Alert!",
+        "button": "Okay Got It"
+      },
+      "warning": {
+        "title": "Warning Alert",
+        "message": "Warning Alert!",
+        "button": "Okay Got It"
+      },
+      "danger": {
+        "title": "Danger Alert",
+        "message": "Danger Alert!",
+        "button": "Okay Got It"
+      }
+    }
+  },
+  "ui": {
+    "alert": {
+      "learnMore": "Learn more"
+    },
+    "video": {
+      "youtubeTitle": "YouTube video",
+      "ratio169": "Video Ratio 16:9",
+      "ratio43": "Video Ratio 4:3",
+      "ratio219": "Video Ratio 21:9",
+      "ratio11": "Video Ratio 1:1"
+    }
+  }
+}

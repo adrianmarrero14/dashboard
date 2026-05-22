@@ -1,13 +1,21 @@
 import Calendar from "@/components/calendar/Calendar";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import { pageMetadata } from "@/lib/metadata";
+import {
+  generateAdminPageMetadata,
+  getAdminPageTitle,
+} from "@/lib/admin-page";
 import React from "react";
 
-export const metadata = pageMetadata("Calendario");
-export default function page() {
+export async function generateMetadata() {
+  return generateAdminPageMetadata("calendar");
+}
+
+export default async function CalendarPage() {
+  const title = await getAdminPageTitle("calendar");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="Calendar" />
+      <PageBreadcrumb pageTitle={title} />
       <Calendar />
     </div>
   );

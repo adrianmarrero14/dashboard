@@ -1,13 +1,15 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 interface AlertProps {
-  variant: "success" | "error" | "warning" | "info"; // Alert type
-  title: string; // Title of the alert
-  message: string; // Message of the alert
-  showLink?: boolean; // Whether to show the "Learn More" link
-  linkHref?: string; // Link URL
-  linkText?: string; // Link text
+  variant: "success" | "error" | "warning" | "info";
+  title: string;
+  message: string;
+  showLink?: boolean;
+  linkHref?: string;
+  linkText?: string;
 }
 
 const Alert: React.FC<AlertProps> = ({
@@ -16,9 +18,11 @@ const Alert: React.FC<AlertProps> = ({
   message,
   showLink = false,
   linkHref = "#",
-  linkText = "Learn more",
+  linkText,
 }) => {
-  // Tailwind classes for each variant
+  const t = useTranslations("ui.alert");
+  const resolvedLinkText = linkText ?? t("learnMore");
+
   const variantClasses = {
     success: {
       container:
@@ -42,7 +46,6 @@ const Alert: React.FC<AlertProps> = ({
     },
   };
 
-  // Icon for each variant
   const icons = {
     success: (
       <svg
@@ -133,7 +136,7 @@ const Alert: React.FC<AlertProps> = ({
               href={linkHref}
               className="inline-block mt-3 text-sm font-medium text-gray-500 underline dark:text-gray-400"
             >
-              {linkText}
+              {resolvedLinkText}
             </Link>
           )}
         </div>

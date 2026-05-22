@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import ComponentCard from "../../common/ComponentCard";
 import Input from "../input/InputField";
 import Label from "../Label";
 
 export default function InputStates() {
+  const tExamples = useTranslations("form.examples.inputStates");
+  const tFields = useTranslations("form.fields");
+  const tPlaceholders = useTranslations("form.placeholders");
+  const tValidation = useTranslations("form.validation");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
 
-  // Simulate a validation check
   const validateEmail = (value: string) => {
     const isValidEmail =
       /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
@@ -21,47 +25,42 @@ export default function InputStates() {
     setEmail(value);
     validateEmail(value);
   };
+
   return (
-    <ComponentCard
-      title="Input States"
-      desc="Validation styles for error, success and disabled states on form controls."
-    >
+    <ComponentCard title={tExamples("title")} desc={tExamples("desc")}>
       <div className="space-y-5 sm:space-y-6">
-        {/* Error Input */}
         <div>
-          <Label>Email</Label>
+          <Label>{tFields("email")}</Label>
           <Input
             type="email"
             defaultValue={email}
             error={error}
             onChange={handleEmailChange}
-            placeholder="Enter your email"
-            hint={error ? "This is an invalid email address." : ""}
+            placeholder={tPlaceholders("emailExample")}
+            hint={error ? tValidation("emailInvalid") : ""}
           />
         </div>
 
-        {/* Success Input */}
         <div>
-          <Label>Email</Label>
+          <Label>{tFields("email")}</Label>
           <Input
             type="email"
             defaultValue={email}
             success={!error}
             onChange={handleEmailChange}
-            placeholder="Enter your email"
-            hint={!error ? "Valid email!" : ""}
+            placeholder={tPlaceholders("emailExample")}
+            hint={!error ? tValidation("emailValid") : ""}
           />
         </div>
 
-        {/* Disabled Input */}
         <div>
-          <Label>Email</Label>
+          <Label>{tFields("email")}</Label>
           <Input
             type="text"
             defaultValue="disabled@example.com"
             disabled={true}
-            placeholder="Disabled email"
-            hint="This field is disabled."
+            placeholder={tPlaceholders("disabledEmail")}
+            hint={tValidation("fieldDisabled")}
           />
         </div>
       </div>

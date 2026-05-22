@@ -1,50 +1,51 @@
 import type { ModuleIconId, ModuleNavItem } from "@/config/modules";
+import type { NavLabelKey } from "@/lib/nav-labels";
 
 export const DEV_NAV_ITEMS: readonly ModuleNavItem[] = [
   {
-    name: "Forms",
+    nameKey: "nav.dev.forms",
     icon: "list",
-    subItems: [{ name: "Form Elements", path: "/form-elements" }],
+    subItems: [{ nameKey: "nav.dev.formElements", path: "/form-elements" }],
   },
   {
-    name: "Tables",
+    nameKey: "nav.dev.tables",
     icon: "table",
-    subItems: [{ name: "Basic Tables", path: "/basic-tables" }],
+    subItems: [{ nameKey: "nav.dev.basicTables", path: "/basic-tables" }],
   },
   {
-    name: "Pages",
+    nameKey: "nav.dev.pages",
     icon: "page",
     subItems: [
-      { name: "Blank Page", path: "/blank" },
-      { name: "404 Error", path: "/error-404" },
+      { nameKey: "nav.dev.blankPage", path: "/blank" },
+      { nameKey: "nav.dev.error404", path: "/error-404" },
     ],
   },
   {
-    name: "Charts",
+    nameKey: "nav.dev.charts",
     icon: "pie-chart",
     subItems: [
-      { name: "Line Chart", path: "/line-chart" },
-      { name: "Bar Chart", path: "/bar-chart" },
+      { nameKey: "nav.dev.lineChart", path: "/line-chart" },
+      { nameKey: "nav.dev.barChart", path: "/bar-chart" },
     ],
   },
   {
-    name: "UI Elements",
+    nameKey: "nav.dev.uiElements",
     icon: "box-cube",
     subItems: [
-      { name: "Alerts", path: "/alerts" },
-      { name: "Avatar", path: "/avatars" },
-      { name: "Badge", path: "/badge" },
-      { name: "Buttons", path: "/buttons" },
-      { name: "Images", path: "/images" },
-      { name: "Videos", path: "/videos" },
+      { nameKey: "nav.dev.alerts", path: "/alerts" },
+      { nameKey: "nav.dev.avatar", path: "/avatars" },
+      { nameKey: "nav.dev.badge", path: "/badge" },
+      { nameKey: "nav.dev.buttons", path: "/buttons" },
+      { nameKey: "nav.dev.images", path: "/images" },
+      { nameKey: "nav.dev.videos", path: "/videos" },
     ],
   },
   {
-    name: "Authentication",
+    nameKey: "nav.dev.authentication",
     icon: "plug-in",
     subItems: [
-      { name: "Sign In", path: "/signin" },
-      { name: "Sign Up", path: "/signup" },
+      { nameKey: "nav.dev.signIn", path: "/signin" },
+      { nameKey: "nav.dev.signUp", path: "/signup" },
     ],
   },
 ] as const;
@@ -54,6 +55,12 @@ export const DEV_ROUTE_PATHS: readonly string[] = DEV_NAV_ITEMS.flatMap((item) =
 );
 
 export const SETTINGS_PATH = "/settings";
+
+export const SETTINGS_NAV_ITEM = {
+  nameKey: "nav.settings" as NavLabelKey,
+  icon: "plug-in" as ModuleIconId,
+  path: SETTINGS_PATH,
+};
 
 export function shouldShowDevRoutes(): boolean {
   return (
