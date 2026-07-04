@@ -17,6 +17,7 @@ export const DEV_NAV_ITEMS: readonly ModuleNavItem[] = [
     icon: "page",
     subItems: [
       { nameKey: "nav.dev.blankPage", path: "/blank" },
+      { nameKey: "nav.dev.apiDemo", path: "/api-demo" },
       { nameKey: "nav.dev.error404", path: "/error-404" },
     ],
   },

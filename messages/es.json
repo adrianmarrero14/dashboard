@@ -64,6 +64,7 @@
       "basicTables": "Tablas básicas",
       "pages": "Páginas",
       "blankPage": "Página en blanco",
+      "apiDemo": "Demo de API",
       "error404": "404 Error",
       "charts": "Gráficos",
       "lineChart": "Gráfico de líneas",
@@ -181,6 +182,9 @@
       "title": "Página en blanco",
       "cardTitle": "Título de la tarjeta",
       "cardBody": "Empieza a añadir contenido en grids o paneles; también puedes usar distintas combinaciones. Revisa el panel y otras páginas."
+    },
+    "apiDemo": {
+      "title": "Demo de API"
     },
     "buttons": {
       "title": "Botones"
@@ -628,6 +632,13 @@
         "button": "Okay Got It"
       }
     }
+  },
+  "apiDemo": {
+    "description": "Ejemplo end-to-end de la capa de red: route handler → servicio → hook useApiQuery → UI. Ejercita el cliente Axios real y sus interceptores contra un endpoint mock que hace de stand-in de dashboard-api.",
+    "reload": "Recargar",
+    "loading": "Cargando…",
+    "simulateError": "Simular error del servidor",
+    "errorTitle": "No se pudieron cargar los datos"
   },
   "ui": {
     "alert": {

@@ -51,6 +51,45 @@ NEXT_PUBLIC_SHOW_DEV_ROUTES=true npm run dev
 
 Or they appear automatically when `NODE_ENV=development`.
 
+## Environment variables
+
+Next.js auto-loads `.env` files per environment:
+
+| File               | Environment        | Committed          | Purpose                              |
+| ------------------ | ------------------ | ------------------ | ------------------------------------ |
+| `.env.example`     | —                  | Yes                | Documents the available variables.   |
+| `.env.development` | `npm run dev`      | Yes                | Development defaults.                 |
+| `.env.production`  | `build` / `start`  | Not included       | Production defaults (create if needed). |
+| `.env.local`       | all                | No (git-ignored)   | Local machine overrides.             |
+
+| Variable                      | Required   | Description                                                                                             |
+| ----------------------------- | ---------- | ------------------------------------------------------------------------------------------------------ |
+| `NEXT_PUBLIC_API_URL`         | Yes (prod) | Base URL of the `dashboard-api` BFF; all HTTP requests go through it (ADR-12). Dev: `/api`. Prod: real URL. |
+| `NEXT_PUBLIC_SHOW_DEV_ROUTES` | No         | `true` to show the template demo pages in the sidebar outside `development`.                            |
+
+In **development**, `NEXT_PUBLIC_API_URL=/api` (from `.env.development`) points to
+the same origin, where the mock route handler in `src/app/api/` stands in for
+`dashboard-api` until the real backend exists. In **production**, set
+`NEXT_PUBLIC_API_URL` to the real BFF URL.
+
+## Network layer (ADR-12)
+
+All HTTP communication goes through a centralized layer; no component imports
+Axios directly:
+
+- `src/api/client.ts` — single Axios instance with request (auth, currently a
+  placeholder — see ADR-14) and response (normalizes errors to
+  `ApiError = { status, message, code }`) interceptors.
+- `src/services/*` — typed functions that consume `apiClient` and expose data to
+  components (never the Axios object itself).
+- `src/hooks/useApiQuery.ts` — generic wrapper over TanStack Query, typed with
+  `ApiError`, returning `{ data, isLoading, error, ... }`.
+- `src/types/api.ts` — base network-layer types.
+
+A working end-to-end example lives at the dev-only `/api-demo` route
+(`src/app/api/demo` route handler → `src/services/demo.ts` → `useDemoItems` → UI
+with loading/error/data states).
+
 ## Getting started
 
 1. Install dependencies:
