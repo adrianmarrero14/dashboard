@@ -64,6 +64,7 @@
       "basicTables": "Basic Tables",
       "pages": "Pages",
       "blankPage": "Blank Page",
+      "apiDemo": "API Demo",
       "error404": "404 Error",
       "charts": "Charts",
       "lineChart": "Line Chart",
@@ -181,6 +182,9 @@
       "title": "Blank Page",
       "cardTitle": "Card Title Here",
       "cardBody": "Start putting content on grids or panels, you can also use different combinations of grids. Please check out the dashboard and other pages."
+    },
+    "apiDemo": {
+      "title": "API Demo"
     },
     "buttons": {
       "title": "Buttons"
@@ -628,6 +632,13 @@
         "button": "Okay Got It"
       }
     }
+  },
+  "apiDemo": {
+    "description": "End-to-end example of the network layer: route handler → service → useApiQuery hook → UI. It exercises the real Axios client and its interceptors against a mock endpoint standing in for dashboard-api.",
+    "reload": "Reload",
+    "loading": "Loading…",
+    "simulateError": "Simulate server error",
+    "errorTitle": "Could not load data"
   },
   "ui": {
     "alert": {
