@@ -6,7 +6,7 @@ export const defaultLocale: Locale = "en";
 
 export const LOCALE_COOKIE = "NEXT_LOCALE";
 
-export const LOCALE_STORAGE_KEY = "adrian-project-locale";
+export const LOCALE_STORAGE_KEY = "dashboard-locale";
 
 export function isValidLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);

@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "Adrián Project",
+    "name": "Dashboard",
     "description": "Administración de vida personal — gestiona tu vida como una empresa.",
     "tagline": "Tu vida personal, gestionada en un solo lugar.",
-    "copyright": "Adrián Project"
+    "copyright": "Dashboard"
   },
   "common": {
     "actions": {

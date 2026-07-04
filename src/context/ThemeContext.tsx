@@ -23,6 +23,10 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     const initialTheme = savedTheme || "light"; // Default to light theme
 
+    // localStorage isn't available during SSR, so the real theme can only be
+    // read after mount; this sync can't be moved into a lazy initializer
+    // without causing a hydration mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initialTheme);
     setIsInitialized(true);
   }, []);

@@ -30,11 +30,11 @@ function toSidebarNavItem(nav: ModuleNavItem): SidebarNavItem {
 export function buildSidebarNav(enabledModules: ModuleId[]): SidebarNavItem[] {
   const items: SidebarNavItem[] = [];
 
-  for (const module of MODULE_REGISTRY) {
-    if (!enabledModules.includes(module.id)) {
+  for (const moduleDef of MODULE_REGISTRY) {
+    if (!enabledModules.includes(moduleDef.id)) {
       continue;
     }
-    for (const nav of module.navItems) {
+    for (const nav of moduleDef.navItems) {
       items.push(toSidebarNavItem(nav));
     }
   }

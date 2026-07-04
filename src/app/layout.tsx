@@ -1,5 +1,6 @@
 import LocaleSync from "@/components/settings/LocaleSync";
 import { ModulesProvider } from "@/context/ModulesContext";
+import { QueryProvider } from "@/context/QueryProvider";
 import { SidebarProvider } from "@/context/SidebarContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { rootMetadata } from "@/lib/metadata";
@@ -31,11 +32,13 @@ export default async function RootLayout({
       <body className={`${outfit.className} dark:bg-gray-900`}>
         <NextIntlClientProvider messages={messages}>
           <LocaleSync />
-          <ThemeProvider>
-            <ModulesProvider>
-              <SidebarProvider>{children}</SidebarProvider>
-            </ModulesProvider>
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider>
+              <ModulesProvider>
+                <SidebarProvider>{children}</SidebarProvider>
+              </ModulesProvider>
+            </ThemeProvider>
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

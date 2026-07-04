@@ -8,11 +8,11 @@ const messagesDir = path.join(root, "messages");
 
 const en = {
   site: {
-    name: "Adrián Project",
+    name: "Dashboard",
     description:
       "Personal life administration — manage your life like a company.",
     tagline: "Your personal life, managed all in one place.",
-    copyright: "Adrián Project",
+    copyright: "Dashboard",
   },
   common: {
     actions: {

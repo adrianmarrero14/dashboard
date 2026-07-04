@@ -52,6 +52,8 @@ const Calendar: React.FC = () => {
   );
 
   useEffect(() => {
+    // Reseeds translated demo events whenever the locale (tDemo) changes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEvents([
       {
         id: "1",
@@ -109,6 +111,8 @@ const Calendar: React.FC = () => {
       );
     } else {
       const newEvent: CalendarEvent = {
+        // Runs only inside the handleAddOrUpdateEvent click handler, never during render.
+        // eslint-disable-next-line react-hooks/purity
         id: Date.now().toString(),
         title: eventTitle,
         start: eventStartDate,

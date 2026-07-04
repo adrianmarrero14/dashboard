@@ -186,6 +186,9 @@ const AppSidebar: React.FC = () => {
     });
 
     if (!submenuMatched) {
+      // openSubmenu also changes independently via manual toggle clicks, so
+      // it can't be fully derived from pathname during render.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setOpenSubmenu(null);
     }
   }, [pathname, isActive, moduleNavItems, devNavItems]);
