@@ -1,7 +1,9 @@
 import SignUpForm from "@/components/auth/SignUpForm";
-import { pageMetadata } from "@/lib/metadata";
+import { generateAdminPageMetadata } from "@/lib/admin-page";
 
-export const metadata = pageMetadata("Registro");
+export async function generateMetadata() {
+  return generateAdminPageMetadata("signUp");
+}
 
 export default function SignUp() {
   return <SignUpForm />;

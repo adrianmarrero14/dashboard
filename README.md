@@ -1,10 +1,10 @@
-# Adrián Project
+# Dashboard
 
 Personal life administration dashboard — manage your life like a company. Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**.
 
 ## Vision
 
-Adrián Project is a modular control panel for day-to-day personal management: employment, finances, projects, calendar, profile, and more. Each area can be enabled or disabled from settings so the sidebar stays focused on what you actually use.
+Dashboard is a modular control panel for day-to-day personal management: employment, finances, projects, calendar, profile, and more. Each area can be enabled or disabled from settings so the sidebar stays focused on what you actually use.
 
 Site copy and metadata are centralized in `src/config/site.ts`.
 
@@ -91,4 +91,4 @@ src/
 
 This project is derived from the [TailAdmin](https://github.com/TailAdmin/free-nextjs-admin-dashboard) Next.js free admin template (MIT License, Copyright (c) 2023 TailAdmin).
 
-Adrián Project-specific changes are documented in [NOTICE](./NOTICE). The full MIT license text is in [LICENSE](./LICENSE).
+Dashboard-specific changes are documented in [NOTICE](./NOTICE). The full MIT license text is in [LICENSE](./LICENSE).

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Table,
@@ -6,9 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-
 import Badge from "../ui/badge/Badge";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+type TableStatus = "active" | "pending" | "cancel";
 
 interface Order {
   id: number;
@@ -21,11 +24,10 @@ interface Order {
   team: {
     images: string[];
   };
-  status: string;
+  status: TableStatus;
   budget: string;
 }
 
-// Define the table data using the interface
 const tableData: Order[] = [
   {
     id: 1,
@@ -43,7 +45,7 @@ const tableData: Order[] = [
       ],
     },
     budget: "3.9K",
-    status: "Active",
+    status: "active",
   },
   {
     id: 2,
@@ -57,7 +59,7 @@ const tableData: Order[] = [
       images: ["/images/user/user-25.jpg", "/images/user/user-26.jpg"],
     },
     budget: "24.9K",
-    status: "Pending",
+    status: "pending",
   },
   {
     id: 3,
@@ -71,7 +73,7 @@ const tableData: Order[] = [
       images: ["/images/user/user-27.jpg"],
     },
     budget: "12.7K",
-    status: "Active",
+    status: "active",
   },
   {
     id: 4,
@@ -89,7 +91,7 @@ const tableData: Order[] = [
       ],
     },
     budget: "2.8K",
-    status: "Cancel",
+    status: "cancel",
   },
   {
     id: 5,
@@ -107,53 +109,60 @@ const tableData: Order[] = [
       ],
     },
     budget: "4.5K",
-    status: "Active",
+    status: "active",
   },
 ];
 
 export default function BasicTableOne() {
+  const t = useTranslations("tables.columns");
+  const tStatus = useTranslations("tables.status");
+
+  const statusColor = (status: TableStatus) => {
+    if (status === "active") return "success";
+    if (status === "pending") return "warning";
+    return "error";
+  };
+
   return (
     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]">
       <div className="max-w-full overflow-x-auto">
         <div className="min-w-[1102px]">
           <Table>
-            {/* Table Header */}
             <TableHeader className="border-b border-gray-100 dark:border-white/[0.05]">
               <TableRow>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  User
+                  {t("user")}
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Project Name
+                  {t("projectName")}
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Team
+                  {t("team")}
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Status
+                  {t("status")}
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Budget
+                  {t("budget")}
                 </TableCell>
               </TableRow>
             </TableHeader>
 
-            {/* Table Body */}
             <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
               {tableData.map((order) => (
                 <TableRow key={order.id}>
@@ -191,7 +200,7 @@ export default function BasicTableOne() {
                             width={24}
                             height={24}
                             src={teamImage}
-                            alt={`Team member ${index + 1}`}
+                            alt={order.user.name}
                             className="w-full"
                           />
                         </div>
@@ -199,17 +208,8 @@ export default function BasicTableOne() {
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                    <Badge
-                      size="sm"
-                      color={
-                        order.status === "Active"
-                          ? "success"
-                          : order.status === "Pending"
-                          ? "warning"
-                          : "error"
-                      }
-                    >
-                      {order.status}
+                    <Badge size="sm" color={statusColor(order.status)}>
+                      {tStatus(order.status)}
                     </Badge>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">

@@ -1,16 +1,26 @@
 import LineChartOne from "@/components/charts/line/LineChartOne";
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import { pageMetadata } from "@/lib/metadata";
+import {
+  generateAdminPageMetadata,
+  getAdminPageTitle,
+} from "@/lib/admin-page";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-export const metadata = pageMetadata("Gráfico de líneas");
-export default function LineChart() {
+export async function generateMetadata() {
+  return generateAdminPageMetadata("lineChart");
+}
+
+export default async function LineChart() {
+  const title = await getAdminPageTitle("lineChart");
+  const t = await getTranslations("pages.lineChart");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="Line Chart" />
+      <PageBreadcrumb pageTitle={title} />
       <div className="space-y-6">
-        <ComponentCard title="Line Chart 1">
+        <ComponentCard title={t("chartTitle")}>
           <LineChartOne />
         </ComponentCard>
       </div>

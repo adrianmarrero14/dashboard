@@ -1,7 +1,9 @@
 import SignInForm from "@/components/auth/SignInForm";
-import { pageMetadata } from "@/lib/metadata";
+import { generateAdminPageMetadata } from "@/lib/admin-page";
 
-export const metadata = pageMetadata("Iniciar sesión");
+export async function generateMetadata() {
+  return generateAdminPageMetadata("signIn");
+}
 
 export default function SignIn() {
   return <SignInForm />;

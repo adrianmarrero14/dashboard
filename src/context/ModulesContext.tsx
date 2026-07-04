@@ -71,8 +71,8 @@ export const ModulesProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 
   const toggleModule = useCallback((id: ModuleId) => {
-    const module = getModuleById(id);
-    if (id === OVERVIEW_MODULE_ID || module?.alwaysEnabled) {
+    const moduleDef = getModuleById(id);
+    if (id === OVERVIEW_MODULE_ID || moduleDef?.alwaysEnabled) {
       return;
     }
 

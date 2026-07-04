@@ -1,6 +1,9 @@
+"use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ChartTab: React.FC = () => {
+  const t = useTranslations("common.chartPeriod");
   const [selected, setSelected] = useState<
     "optionOne" | "optionTwo" | "optionThree"
   >("optionOne");
@@ -18,7 +21,7 @@ const ChartTab: React.FC = () => {
           "optionOne"
         )}`}
       >
-        Monthly
+        {t("monthly")}
       </button>
 
       <button
@@ -27,7 +30,7 @@ const ChartTab: React.FC = () => {
           "optionTwo"
         )}`}
       >
-        Quarterly
+        {t("quarterly")}
       </button>
 
       <button
@@ -36,7 +39,7 @@ const ChartTab: React.FC = () => {
           "optionThree"
         )}`}
       >
-        Annually
+        {t("annually")}
       </button>
     </div>
   );

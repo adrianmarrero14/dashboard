@@ -5,7 +5,7 @@ import {
 } from "@/config/modules";
 import type { PreferencesService } from "@/types/preferences";
 
-const STORAGE_KEY = "adrian-project-enabled-modules";
+const STORAGE_KEY = "dashboard-enabled-modules";
 
 function readStoredModules(): ModuleId[] | null {
   if (typeof window === "undefined") {

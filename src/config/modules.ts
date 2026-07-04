@@ -1,3 +1,5 @@
+import type { NavLabelKey } from "@/lib/nav-labels";
+
 export type ModuleId =
   | "overview"
   | "employment"
@@ -23,12 +25,12 @@ export type ModuleIconId =
   | "plug-in";
 
 export interface ModuleNavSubItem {
-  name: string;
+  nameKey: NavLabelKey;
   path: string;
 }
 
 export interface ModuleNavItem {
-  name: string;
+  nameKey: NavLabelKey;
   icon: ModuleIconId;
   path?: string;
   subItems?: ModuleNavSubItem[];
@@ -36,8 +38,6 @@ export interface ModuleNavItem {
 
 export interface AppModule {
   id: ModuleId;
-  label: string;
-  description: string;
   icon: ModuleIconId;
   enabledByDefault: boolean;
   /** When true, the module cannot be disabled in settings. */
@@ -49,14 +49,12 @@ export interface AppModule {
 export const MODULE_REGISTRY: readonly AppModule[] = [
   {
     id: "overview",
-    label: "Inicio",
-    description: "Panel de resumen y vista general de tu vida personal.",
     icon: "grid",
     enabledByDefault: true,
     alwaysEnabled: true,
     navItems: [
       {
-        name: "Resumen",
+        nameKey: "modules.overview.nav.main",
         icon: "grid",
         path: "/",
       },
@@ -65,13 +63,11 @@ export const MODULE_REGISTRY: readonly AppModule[] = [
   },
   {
     id: "employment",
-    label: "Empleo",
-    description: "Trabajo, contratos y seguimiento profesional.",
     icon: "group",
     enabledByDefault: false,
     navItems: [
       {
-        name: "Empleo",
+        nameKey: "modules.employment.nav.main",
         icon: "group",
         path: "/employment",
       },
@@ -80,13 +76,11 @@ export const MODULE_REGISTRY: readonly AppModule[] = [
   },
   {
     id: "finances",
-    label: "Finanzas",
-    description: "Ingresos, gastos y planificación financiera.",
     icon: "dollar-line",
     enabledByDefault: false,
     navItems: [
       {
-        name: "Finanzas",
+        nameKey: "modules.finances.nav.main",
         icon: "dollar-line",
         path: "/finances",
       },
@@ -95,13 +89,11 @@ export const MODULE_REGISTRY: readonly AppModule[] = [
   },
   {
     id: "projects",
-    label: "Proyectos",
-    description: "Proyectos personales y objetivos a largo plazo.",
     icon: "folder",
     enabledByDefault: false,
     navItems: [
       {
-        name: "Proyectos",
+        nameKey: "modules.projects.nav.main",
         icon: "folder",
         path: "/projects",
       },
@@ -110,13 +102,11 @@ export const MODULE_REGISTRY: readonly AppModule[] = [
   },
   {
     id: "calendar",
-    label: "Calendario",
-    description: "Eventos y planificación temporal.",
     icon: "calender",
     enabledByDefault: true,
     navItems: [
       {
-        name: "Calendario",
+        nameKey: "modules.calendar.nav.main",
         icon: "calender",
         path: "/calendar",
       },
@@ -125,13 +115,11 @@ export const MODULE_REGISTRY: readonly AppModule[] = [
   },
   {
     id: "profile",
-    label: "Perfil",
-    description: "Datos personales y preferencias de cuenta.",
     icon: "user-circle",
     enabledByDefault: true,
     navItems: [
       {
-        name: "Perfil",
+        nameKey: "modules.profile.nav.main",
         icon: "user-circle",
         path: "/profile",
       },

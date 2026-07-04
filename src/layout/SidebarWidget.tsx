@@ -1,8 +1,14 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+
 import { SITE } from "@/config/site";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import React from "react";
 
 export default function SidebarWidget() {
+  const t = useTranslations("layout.sidebar.widget");
+  const tSite = useTranslations("site");
+
   return (
     <div
       className={`
@@ -12,13 +18,13 @@ export default function SidebarWidget() {
         {SITE.shortName}
       </h3>
       <p className="mb-4 text-gray-500 text-theme-sm dark:text-gray-400">
-        {SITE.tagline}
+        {tSite("tagline")}
       </p>
       <Link
         href="/settings"
         className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-brand-500 text-theme-sm hover:bg-brand-600"
       >
-        Configuración
+        {t("settings")}
       </Link>
     </div>
   );

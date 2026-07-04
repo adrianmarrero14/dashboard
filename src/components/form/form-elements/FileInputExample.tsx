@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 import ComponentCard from "../../common/ComponentCard";
 import FileInput from "../input/FileInput";
 import Label from "../Label";
 
 export default function FileInputExample() {
+  const tExamples = useTranslations("form.examples.fileInput");
+
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -13,9 +16,9 @@ export default function FileInputExample() {
   };
 
   return (
-    <ComponentCard title="File Input">
+    <ComponentCard title={tExamples("title")} desc={tExamples("desc")}>
       <div>
-        <Label>Upload file</Label>
+        <Label>{tExamples("uploadLabel")}</Label>
         <FileInput onChange={handleFileChange} className="custom-class" />
       </div>
     </ComponentCard>

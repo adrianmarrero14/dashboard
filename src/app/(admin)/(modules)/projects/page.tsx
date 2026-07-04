@@ -1,23 +1,19 @@
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import { pageMetadata } from "@/lib/metadata";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-export const metadata = pageMetadata("Proyectos");
+export async function generateMetadata() {
+  return pageMetadata("projects", "projects");
+}
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const t = await getTranslations("pages.projects");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="Proyectos" />
-      <div className="min-h-[280px] rounded-2xl border border-gray-200 bg-white px-5 py-7 dark:border-gray-800 dark:bg-white/[0.03] xl:px-10 xl:py-12">
-        <div className="mx-auto w-full max-w-[630px] text-center">
-          <h3 className="mb-4 font-semibold text-gray-800 text-theme-xl dark:text-white/90 sm:text-2xl">
-            Proyectos
-          </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400 sm:text-base">
-            Próximamente: proyectos personales y objetivos a largo plazo.
-          </p>
-        </div>
-      </div>
+      <PageBreadcrumb pageTitle={t("title")} />
+      <p className="text-sm text-gray-600 dark:text-gray-400">{t("description")}</p>
     </div>
   );
 }

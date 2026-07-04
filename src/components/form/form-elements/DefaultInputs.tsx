@@ -1,53 +1,64 @@
 "use client";
-import React, { useState } from 'react';
-import ComponentCard from '../../common/ComponentCard';
-import Label from '../Label';
-import Input from '../input/InputField';
-import Select from '../Select';
-import { ChevronDownIcon, EyeCloseIcon, EyeIcon, TimeIcon } from '../../../icons';
-import DatePicker from '@/components/form/date-picker';
+import React, { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
+import ComponentCard from "../../common/ComponentCard";
+import Label from "../Label";
+import Input from "../input/InputField";
+import Select from "../Select";
+import { ChevronDownIcon, EyeCloseIcon, EyeIcon, TimeIcon } from "../../../icons";
+import DatePicker from "@/components/form/date-picker";
 
 export default function DefaultInputs() {
+  const tExamples = useTranslations("form.examples.defaultInputs");
+  const tFields = useTranslations("form.fields");
+  const tPlaceholders = useTranslations("form.placeholders");
+  const tOptions = useTranslations("form.examples.options");
   const [showPassword, setShowPassword] = useState(false);
-  const options = [
-    { value: "marketing", label: "Marketing" },
-    { value: "template", label: "Template" },
-    { value: "development", label: "Development" },
-  ];
+
+  const options = useMemo(
+    () => [
+      { value: "marketing", label: tOptions("marketing") },
+      { value: "template", label: tOptions("template") },
+      { value: "development", label: tOptions("development") },
+    ],
+    [tOptions]
+  );
+
   const handleSelectChange = (value: string) => {
     console.log("Selected value:", value);
   };
+
   return (
-    <ComponentCard title="Default Inputs">
+    <ComponentCard title={tExamples("title")} desc={tExamples("desc")}>
       <div className="space-y-6">
         <div>
-          <Label>Input</Label>
+          <Label>{tFields("input")}</Label>
           <Input type="text" />
         </div>
         <div>
-          <Label>Input with Placeholder</Label>
-          <Input type="text" placeholder="info@gmail.com" />
+          <Label>{tFields("inputWithPlaceholder")}</Label>
+          <Input type="text" placeholder={tPlaceholders("emailExample")} />
         </div>
         <div>
-          <Label>Select Input</Label>
+          <Label>{tFields("selectInput")}</Label>
           <div className="relative">
             <Select
-            options={options}
-            placeholder="Select an option"
-            onChange={handleSelectChange}
-            className="dark:bg-dark-900"
-          />
-             <span className="absolute text-gray-500 -translate-y-1/2 pointer-events-none right-3 top-1/2 dark:text-gray-400">
-              <ChevronDownIcon/>
+              options={options}
+              placeholder={tPlaceholders("selectOption")}
+              onChange={handleSelectChange}
+              className="dark:bg-dark-900"
+            />
+            <span className="absolute text-gray-500 -translate-y-1/2 pointer-events-none right-3 top-1/2 dark:text-gray-400">
+              <ChevronDownIcon />
             </span>
           </div>
         </div>
         <div>
-          <Label>Password Input</Label>
+          <Label>{tFields("passwordInput")}</Label>
           <div className="relative">
             <Input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
+              placeholder={tPlaceholders("password")}
             />
             <button
               onClick={() => setShowPassword(!showPassword)}
@@ -65,17 +76,16 @@ export default function DefaultInputs() {
         <div>
           <DatePicker
             id="date-picker"
-            label="Date Picker Input"
-            placeholder="Select a date"
+            label={tFields("datePickerInput")}
+            placeholder={tPlaceholders("selectADate")}
             onChange={(dates, currentDateString) => {
-              // Handle your logic
               console.log({ dates, currentDateString });
             }}
           />
         </div>
 
         <div>
-          <Label htmlFor="tm">Time Picker Input</Label>
+          <Label htmlFor="tm">{tFields("timePicker")}</Label>
           <div className="relative">
             <Input
               type="time"
@@ -89,11 +99,11 @@ export default function DefaultInputs() {
           </div>
         </div>
         <div>
-          <Label htmlFor="tm">Input with Payment</Label>
+          <Label htmlFor="tm">{tFields("payment")}</Label>
           <div className="relative">
             <Input
               type="text"
-              placeholder="Card number"
+              placeholder={tPlaceholders("cardNumber")}
               className="pl-[62px]"
             />
             <span className="absolute left-0 top-1/2 flex h-11 w-[46px] -translate-y-1/2 items-center justify-center border-r border-gray-200 dark:border-gray-800">

@@ -9,15 +9,22 @@ import RadioButtons from "@/components/form/form-elements/RadioButtons";
 import SelectInputs from "@/components/form/form-elements/SelectInputs";
 import TextAreaInput from "@/components/form/form-elements/TextAreaInput";
 import ToggleSwitch from "@/components/form/form-elements/ToggleSwitch";
-import { pageMetadata } from "@/lib/metadata";
+import {
+  generateAdminPageMetadata,
+  getAdminPageTitle,
+} from "@/lib/admin-page";
 import React from "react";
 
-export const metadata = pageMetadata("Elementos de formulario");
+export async function generateMetadata() {
+  return generateAdminPageMetadata("formElements");
+}
 
-export default function FormElements() {
+export default async function FormElements() {
+  const title = await getAdminPageTitle("formElements");
+
   return (
     <div>
-      <PageBreadcrumb pageTitle="From Elements" />
+      <PageBreadcrumb pageTitle={title} />
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
         <div className="space-y-6">
           <DefaultInputs />
@@ -27,10 +34,10 @@ export default function FormElements() {
         </div>
         <div className="space-y-6">
           <InputGroup />
-          <FileInputExample />
+          <ToggleSwitch />
           <CheckboxComponents />
           <RadioButtons />
-          <ToggleSwitch />
+          <FileInputExample />
           <DropzoneComponent />
         </div>
       </div>

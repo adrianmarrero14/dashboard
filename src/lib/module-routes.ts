@@ -16,8 +16,8 @@ export function getModuleIdForPath(pathname: string): ModuleId | null {
 
   let matched: { id: ModuleId; route: string } | null = null;
 
-  for (const module of MODULE_REGISTRY) {
-    for (const route of module.routes) {
+  for (const moduleDef of MODULE_REGISTRY) {
+    for (const route of moduleDef.routes) {
       const matches =
         route === "/"
           ? pathname === "/"
@@ -28,7 +28,7 @@ export function getModuleIdForPath(pathname: string): ModuleId | null {
       }
 
       if (!matched || route.length > matched.route.length) {
-        matched = { id: module.id, route };
+        matched = { id: moduleDef.id, route };
       }
     }
   }

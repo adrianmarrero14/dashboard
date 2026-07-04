@@ -1,6 +1,6 @@
 import {
   DEV_NAV_ITEMS,
-  SETTINGS_PATH,
+  SETTINGS_NAV_ITEM,
   shouldShowDevRoutes,
 } from "@/config/dev-routes";
 import {
@@ -9,23 +9,18 @@ import {
   type ModuleId,
   type ModuleNavItem,
 } from "@/config/modules";
+import type { NavLabelKey } from "@/lib/nav-labels";
 
 export type SidebarNavItem = {
-  name: string;
+  nameKey: NavLabelKey;
   icon: ModuleIconId;
   path?: string;
-  subItems?: { name: string; path: string }[];
-};
-
-export const SETTINGS_NAV_ITEM: SidebarNavItem = {
-  name: "Configuración",
-  icon: "plug-in",
-  path: SETTINGS_PATH,
+  subItems?: { nameKey: NavLabelKey; path: string }[];
 };
 
 function toSidebarNavItem(nav: ModuleNavItem): SidebarNavItem {
   return {
-    name: nav.name,
+    nameKey: nav.nameKey,
     icon: nav.icon,
     path: nav.path,
     subItems: nav.subItems,
@@ -35,11 +30,11 @@ function toSidebarNavItem(nav: ModuleNavItem): SidebarNavItem {
 export function buildSidebarNav(enabledModules: ModuleId[]): SidebarNavItem[] {
   const items: SidebarNavItem[] = [];
 
-  for (const module of MODULE_REGISTRY) {
-    if (!enabledModules.includes(module.id)) {
+  for (const moduleDef of MODULE_REGISTRY) {
+    if (!enabledModules.includes(moduleDef.id)) {
       continue;
     }
-    for (const nav of module.navItems) {
+    for (const nav of moduleDef.navItems) {
       items.push(toSidebarNavItem(nav));
     }
   }
@@ -51,4 +46,4 @@ export function buildDevSidebarNav(): SidebarNavItem[] {
   return DEV_NAV_ITEMS.map(toSidebarNavItem);
 }
 
-export { shouldShowDevRoutes };
+export { SETTINGS_NAV_ITEM, shouldShowDevRoutes };
